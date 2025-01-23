@@ -15,30 +15,38 @@ public class BankAccount {
     public BankAccount(int accountNumber, String cardholderName, double initialDeposit) {
         this.accountNumber = accountNumber;
         this.cardholderName = cardholderName;
-        this.balance = initialDeposit;
+        deposit(initialDeposit);
     }
 
+    //Get and Set
     public int getAccountNumber() {
+
         return accountNumber;
     }
 
     public String getCardholderName() {
+
         return cardholderName;
     }
 
     public void setCardholderName(String cardholderName) {
+
         this.cardholderName = cardholderName;
     }
 
     public double getBalance() {
+
         return balance;
     }
 
+    //Metodos
     public void deposit(double amount) {
+
         this.balance += amount;
     }
 
     public void withdraw(double amount) {
+
         this.balance -= amount + WITHDRAWAL_FEE;
     }
 

@@ -9,6 +9,9 @@ public class Program {
     public static void main(String[] args) {
         Locale.setDefault(Locale.US);
         try (Scanner sc = new Scanner(System.in)) {
+
+            BankAccount account;
+
             // Solicitando o número da conta
             System.out.print("Enter account number: ");
             int accountNumber = sc.nextInt();
@@ -27,7 +30,6 @@ public class Program {
             }
 
             // Criando a conta bancária com ou sem depósito inicial
-            BankAccount account;
             if (initialDeposit == 'y') {
                 System.out.print("Enter initial deposit value: ");
                 double initialDepositValue = sc.nextDouble();
